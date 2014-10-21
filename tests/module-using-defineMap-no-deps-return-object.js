@@ -1,0 +1,3 @@
+defineMap({
+    ok: true
+});

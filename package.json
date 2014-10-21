@@ -1,0 +1,11 @@
+{
+  "name": "amd-define-map",
+  "version": "1.0.0",
+  "description": "AMD define function that takes a dependency map",
+  "devDependencies": {
+    "intern": "2.1.1"
+  },
+  "scripts": {
+    "test": "intern-client config=tests/intern"
+  }
+}
