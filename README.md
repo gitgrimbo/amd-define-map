@@ -5,7 +5,7 @@ resolve those dependencies into a 'resolved' map.
 
 E.g.
 
-````
+````javascript
 defineMap({
     lang: "dojo/_base/lang",
     relative: "./relative",
@@ -28,7 +28,7 @@ a dependency MID.  The `defineMap` approach means I no longer have to worry abou
 
 For example, here is some sample code that is typical of my mistakes.
 
-````
+````javascript
 define([
     "dependency1",
     "dependency2",
@@ -43,7 +43,7 @@ define([
 
 I remove `"dependency2"`, but I forget to remove the callback parameter:
 
-````
+````javascript
 define([
     "dependency1",
     "dependency3",
@@ -60,7 +60,7 @@ Now the `dep2` argument is assigned to the `"dependency3"` module, which is not 
 I add a dependency, but I add it to the end of the dependency list because I have forgetten that one of the
 dependencies had no callback parameter (because it didn't need one).
 
-````
+````javascript
 define([
     "dependency1",
     "dependency2",
@@ -79,7 +79,7 @@ the "dependency4" module isn't assigned to any callback parameter.
 
 Rewriting the original sample using `defineMap()`:
 
-````
+````javascript
 defineMap({
     dep1: "dependency1",
     dep2: "dependency2",
@@ -94,7 +94,7 @@ defineMap({
 
 I remove `"dependency2"` from the define map.
 
-````
+````javascript
 defineMap({
     dep1: "dependency1",
     dep3: "dependency3",
@@ -110,7 +110,7 @@ Everything is fine, `"dependency2"` is no longer `require`d, and `deps` simply n
 
 I add `"dependency4"` to the define map (anywhere I like inside the map, order is unimportant).
 
-````
+````javascript
 defineMap({
     dep3: "dependency4",
     dep1: "dependency1",
@@ -165,16 +165,16 @@ All files           |     98.11 |        80 |       100 |     98.11 |
 After the test, you should also have an `lcov.info` file and a `html-report` folder.  The html-report has an
 `index.html` page that can be viewed in a browser either from the file system:
 
-[file:///D:/dev/git_repos/amd-define-map/html-report/index.html](file:///D:/dev/git_repos/amd-define-map/html-report/index.html)
+file:///D/dev/git_repos/amd-define-map/html-report/index.html
 
 or from a web server you start from the repo folder:
 
-http://localhost:8080/html-report/
+<http://localhost:8080/html-report/>
 
 ### Browser
 
 The Intern has a `client.html` test runner that can be accessed via a web server started from the repo folder:
 
-http://localhost:8080/node_modules/intern/client.html?config=tests/intern
+<http://localhost:8080/node_modules/intern/client.html?config=tests/intern>
 
 The browser test does not produce an `lcov.info` file or `html-report` folder.
