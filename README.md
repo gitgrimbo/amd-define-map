@@ -171,6 +171,10 @@ or from a web server you start from the repo folder:
 
 <http://localhost:8080/html-report/>
 
+For example:
+
+<http://gitgrimbo.github.io/amd-define-map/html-report/>
+
 ### Browser
 
 The Intern has a `client.html` test runner that can be accessed via a web server started from the repo folder:
