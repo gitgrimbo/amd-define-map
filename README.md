@@ -162,18 +162,18 @@ All files           |     98.11 |        80 |       100 |     98.11 |
 --------------------|-----------|-----------|-----------|-----------|
 </pre>
 
-After the test, you should also have an `lcov.info` file and a `html-report` folder.  The html-report has an
-`index.html` page that can be viewed in a browser either from the file system:
+After the test, you should also have an `lcov.info` file and a `code-coverage-report` folder.  The
+`code-coverage-report` folder has an `index.html` page that can be viewed in a browser either from the file system:
 
-file:///D/dev/git_repos/amd-define-map/html-report/index.html
+file:///D/dev/git_repos/amd-define-map/code-coverage-report/index.html
 
 or from a web server you start from the repo folder:
 
-<http://localhost:8080/html-report/>
+<http://localhost:8080/code-coverage-report/>
 
 For example:
 
-<http://gitgrimbo.github.io/amd-define-map/html-report/>
+<http://gitgrimbo.github.io/amd-define-map/code-coverage-report/>
 
 ### Browser
 
