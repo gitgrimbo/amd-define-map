@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for js\module-using-defineMap.js</title>
+    <title>Code coverage report for js\define-map.js</title>
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="../prettify.css">
@@ -196,23 +196,23 @@
 </head>
 <body>
 <div class="header high">
-    <h1>Code coverage report for <span class="entity">js\module-using-defineMap.js</span></h1>
+    <h1>Code coverage report for <span class="entity">js\define-map.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">100% <small>(9 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">98.11% <small>(52 / 53)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">80% <small>(16 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">100% <small>(3 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">100% <small>(8 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">98.11% <small>(52 / 53)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">js\</a> &#187; module-using-defineMap.js</div>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">js\</a> &#187; define-map.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
@@ -237,7 +237,120 @@
 19
 20
 21
-22</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -245,46 +358,227 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">defineMap({
-    module: "module",
-    stringValueModule: "./string-value-module",
-    html: "intern/dojo/text!./test.txt",
-    _: ["./module-that-sets-global"]
-}, function(deps) {
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Basic attempt at implementing a define function that can take a map of dependency_alias-&gt;dependency_mid, and
+ * resolve those dependencies into a 'resolved' map.
+ *
+ * E.g.
+ *
+ * &lt;pre&gt;
+ * defineMap({
+ *     lang: "dojo/_base/lang",
+ *     relative: "./relative",
+ *     module: "module",
+ *     _: ["dojo/domReady!"]
+ * }, function(deps) {
+ *     console.log(deps.lang);
+ *     console.log(deps.relative);
+ *     console.log(deps.module.id);
+ * });
+ * &lt;/pre&gt;
+ *
+ * Underscore can be used as a dependency_alias for modules you don't need a reference to.  The dependency_mid for
+ * this can be a single mid string, or an array of mid strings.
+ */
+defineMap = function(mid, dependencies, factory) {
+    var METH = "defineMap";
+    var DEBUG = 0;
 &nbsp;
-    var global = (function() { return this; }());
+    // These are the arguments to be passed to define().
+    var argsForDefine = arguments;
 &nbsp;
-    function isOk(assert) {
-        assert.isString(deps.module.id);
-        assert.equal(deps.stringValueModule, "string-value-module");
-        assert.equal(deps.html, "TEXT!");
-        // execute context-less function to get global scope
-        assert.isTrue(global.amdDefineMapFlag);
+    function log() {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (DEBUG) {
+<span class="cstat-no" title="statement not covered" >            console.log.apply(console, [METH].concat([].slice.apply(arguments)));</span>
+        }
     }
 &nbsp;
-    return {
-        isOk: isOk
-    };
-});
+    function isArray(it) {
+        return "[object Array]" === Object.prototype.toString.apply(it);
+    }
+&nbsp;
+    function processDependencies(dependencies) {
+        // Assume dependencies is an array of module ids, and set to mids.
+        var mids = dependencies;
+&nbsp;
+        // If dependencies is not an array (of module ids) then treat it as an object map of module aliases to module
+        // ids. Remember the order of the module mids as well for when we come to resolve everything.
+        var moduleNames = null;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (!isArray(dependencies)) {
+            mids = [];
+            moduleNames = [];
+            for (var depAlias in dependencies) {
+                var mid = dependencies[depAlias];
+                if ("_" === depAlias) {
+                    if ("string" === typeof mid) {
+                        mids.push(mid);
+                    } else {
+                        // assume array
+                        mids = mids.concat(mid);
+                    }
+                } else {
+                    mids.push(mid);
+                    moduleNames.push(depAlias);
+                }
+            }
+        }
+        return {
+            mids: mids,
+            moduleNames: moduleNames
+        };
+    }
+&nbsp;
+    function handleMoreThanOneArgument() {
+        if ("string" !== typeof mid) {
+            // explicit module id not provided, shift args
+            factory = dependencies;
+            dependencies = mid;
+            mid = null;
+        }
+        log("mid", mid, "dependencies", dependencies, "factory", factory);
+&nbsp;
+        var processed = processDependencies(dependencies);
+        var mids = processed.mids;
+        var moduleNames = processed.moduleNames;
+&nbsp;
+        log("mids", mids, "moduleName", moduleNames);
+&nbsp;
+        function callback() {
+            log("callback", "arguments", arguments);
+            log("callback", "moduleNames", moduleNames);
+&nbsp;
+            var moduleMap = null;
+&nbsp;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (moduleNames) {
+                // moduleNames being defined means we want to use a moduleMap
+                moduleMap = {};
+                for (var i = 0; i &lt; moduleNames.length; i++) {
+                    moduleMap[moduleNames[i]] = arguments[i];
+                }
+            }
+            if ("function" === typeof factory) {
+                var args = moduleMap ? [moduleMap] : <span class="branch-1 cbranch-no" title="branch not covered" >arguments;</span>
+                return factory.apply(null, args);
+            } else {
+                return factory;
+            }
+        }
+&nbsp;
+        argsForDefine = mid ? [mid, mids, callback] : [mids, callback];
+    }
+&nbsp;
+    log("define", define);
+    log("mid", mid, "dependencies", dependencies, "factory", factory);
+&nbsp;
+    if (arguments.length !== 1) {
+        handleMoreThanOneArgument();
+    }
+&nbsp;
+    log("args passed to define", argsForDefine);
+    return define.apply(null, argsForDefine);
+};
 &nbsp;</pre></td></tr>
 </table></pre>
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 21 2014 11:10:44 GMT+0100 (GMT Daylight Time)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 22 2014 23:16:40 GMT+0100 (GMT Daylight Time)</div>
 </div>
 
 <script src="../prettify.js"></script>
