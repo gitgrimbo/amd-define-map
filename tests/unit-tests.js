@@ -79,8 +79,9 @@ define([
 
         // before each test executes
         beforeEach: function() {
+            delete global.amdDefineMapFlag;
             // Module "module-that-sets-global.js" sets a global flag for some tests, so make sure it gets reset.
-            require.undef("./module-that-sets-global");
+            require.undef(require.toAbsMid("./module-that-sets-global"));
         }
     };
 
