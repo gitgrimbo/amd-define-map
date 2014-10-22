@@ -23,32 +23,53 @@ page.onCallback = function(data) {
     }
 }
 
-function waitForPageHtml(page, timeToWaitForPageMs, timeoutMessage, callbackResponsibleForCallPhantom) {
+function waitForPageHtml(page, opts) {
     setTimeout(function() {
         page.onCallback({
             timeout: true,
-            message: timeoutMessage
+            message: opts.timeoutMessage
         });
-    }, timeToWaitForPageMs);
+    }, opts.timeToWaitForPageMs);
 
-    page.evaluate(callbackResponsibleForCallPhantom);
+    if (opts.callbackArgs) {
+        page.evaluate.apply(page, [opts.callbackResponsibleForCallPhantom].concat(opts.callbackArgs));
+    } else {
+        page.evaluate(opts.callbackResponsibleForCallPhantom);
+    }
+}
+
+function defaultCallback() {
+    if (typeof window.callPhantom === "function") {
+        var html = document.documentElement.outerHTML;
+        window.callPhantom({ html: html });
+    }
 }
 
 /**
  * @param url {string}
  *          The url to load.
- * @param timeToWaitForPageMs {integer}
+ * @param opts {object}
+ *          The options object.
+ * @param opts.timeToWaitForPageMs {integer}
  *          The number of milliseconds to wait before admitting a timeout.
- * @param timeoutMessage {string}
+ * @param opts.timeoutMessage {string}
  *          The message to show when timeout occurs. Make this relevant to your timeout logic.
- * @param callbackResponsibleForCallPhantom {function}
+ * @param opts.callbackResponsibleForCallPhantom {function}
  *          A function responsible for calling window.callPhantom({html: your_html_value}) when the page is ready,
  *          according to your logic.
+ * @param opts.callbackArgs {array}
+ *          The arguments that will be passed to the callback (used to pass node-side data to browser-side).
  */
-function saveHtml(url, timeToWaitForPageMs, timeoutMessage, callbackResponsibleForCallPhantom) {
+function saveHtml(url, opts) {
+    opts = opts || {};
+    opts.timeToWaitForPageMs = opts.timeToWaitForPageMs || 5000;
+    opts.timeoutMessage = opts.timeoutMessage || "Timeout";
+
+    opts.callbackResponsibleForCallPhantom = opts.callbackResponsibleForCallPhantom || defaultCallback;
+
     page.open(url, function(status) {
         if (status === 'success') {
-            waitForPageHtml(page, timeToWaitForPageMs, timeoutMessage, callbackResponsibleForCallPhantom);
+            waitForPageHtml(page, opts);
         } else {
             phantom.exit();
         }
