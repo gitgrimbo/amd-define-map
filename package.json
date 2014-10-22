@@ -6,6 +6,7 @@
     "intern": "2.1.1"
   },
   "scripts": {
-    "test": "intern-client config=tests/intern"
+    "test": "intern-client config=tests/intern",
+    "posttest": "ren html-report code-coverage-report"
   }
 }
