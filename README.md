@@ -182,3 +182,24 @@ The Intern has a `client.html` test runner that can be accessed via a web server
 <http://localhost:8080/node_modules/intern/client.html?config=tests/intern>
 
 The browser test does not produce an `lcov.info` file or `html-report` folder.
+
+### PhantomJS
+
+PhantomJS can be used to run the client tests and save a local copy of the `'html'` reporter's HTML report.
+
+Run `.\save-intern-html-report\save-intern-html-report.bat` from the project root and an `intern-html-report`
+folder should be generated.  To allow this report to be viewed standalone, the content of the `'html'` reporter's
+`html.css` file is inlined into the generated report.  This is so we don't need access to a `node_modules` folder
+to view the report.
+
+View with:
+
+file:///D/dev/git_repos/amd-define-map/intern-html-report/index.html
+
+or from a web server you start from the repo folder:
+
+<http://localhost:8080/intern-html-report/>
+
+For example:
+
+<http://gitgrimbo.github.io/amd-define-map/intern-html-report/>
